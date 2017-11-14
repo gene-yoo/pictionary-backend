@@ -3,7 +3,11 @@ class Game < ApplicationRecord
   has_many :players, through: :player_games
   has_many :images
 
-  def currentImage
+  def currentImageURL
     self.images.last.data_url
+  end
+
+  def currentImageId
+    self.images.last.id
   end
 end

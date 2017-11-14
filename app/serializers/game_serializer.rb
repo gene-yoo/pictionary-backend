@@ -1,3 +1,3 @@
 class GameSerializer < ActiveModel::Serializer
-  attributes :id, :currentImage
+  attributes :id, :currentImageURL, :currentImageId
 end
