@@ -25,4 +25,12 @@ class Game < ApplicationRecord
   def currentDrawerId
     self.player_games.where(is_drawer: true).first.player_id
   end
+
+  def currentDrawerUsername
+    self.player_games.where(is_drawer: true).first.player.username
+  end
+
+  def currentDrawer
+    self.player_games.where(is_drawer: true).first
+  end
 end
