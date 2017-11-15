@@ -21,4 +21,8 @@ class Game < ApplicationRecord
       { player_username: msg.player_username, content: msg.content, player_id: msg.player_id }
     end
   end
+
+  def currentDrawerId
+    self.player_games.where(is_drawer: true).first.id || nil
+  end
 end
