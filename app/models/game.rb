@@ -10,4 +10,8 @@ class Game < ApplicationRecord
   def currentImageId
     self.images.last.id
   end
+
+  def currentKeyword
+    self.images.last.keyword
+  end
 end

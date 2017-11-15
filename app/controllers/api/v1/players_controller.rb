@@ -1,6 +1,7 @@
 class Api::V1::PlayersController < ApplicationController
   def create
     @player = Player.find_or_create_by(player_params)
+    @player.games << Game.first
     render json: @player
   end
 
