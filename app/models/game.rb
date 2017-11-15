@@ -1,6 +1,7 @@
 class Game < ApplicationRecord
   has_many :player_games
   has_many :players, through: :player_games
+  has_many :messages, through: :player_games
   has_many :images
 
   def currentImageURL
@@ -13,5 +14,11 @@ class Game < ApplicationRecord
 
   def currentKeyword
     self.images.last.keyword
+  end
+
+  def recentMessages
+    self.messages.last(3).map do |msg|
+      { player_username: msg.player_username, content: msg.content, player_id: msg.player_id }
+    end
   end
 end

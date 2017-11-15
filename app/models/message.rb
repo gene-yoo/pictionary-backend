@@ -10,4 +10,11 @@ class Message < ApplicationRecord
   def game_id
     self.player_game.game.id
   end
+  def game
+    self.player_game.game
+  end
+
+  def guessed_correctly
+    self.game.currentKeyword == self.content
+  end
 end

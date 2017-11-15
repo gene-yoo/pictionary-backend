@@ -1,3 +1,4 @@
 class MessageSerializer < ActiveModel::Serializer
-  attributes :id, :content, :player_username, :player_id, :game_id
+  attributes :id, :content, :player_username, :player_id, :game_id, :guessed_correctly
+  
 end
