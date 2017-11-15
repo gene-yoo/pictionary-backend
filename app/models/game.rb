@@ -23,6 +23,6 @@ class Game < ApplicationRecord
   end
 
   def currentDrawerId
-    self.player_games.where(is_drawer: true).first.id || nil
+    self.player_games.where(is_drawer: true).first.player_id
   end
 end
