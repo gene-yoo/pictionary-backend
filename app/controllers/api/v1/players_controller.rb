@@ -5,6 +5,11 @@ class Api::V1::PlayersController < ApplicationController
     render json: @player
   end
 
+  def show
+    @player = Player.find(params[:id])
+    render json: @player
+  end
+
   private
   def player_params
     params.require(:player).permit(:username)
