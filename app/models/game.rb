@@ -17,7 +17,7 @@ class Game < ApplicationRecord
   end
 
   def recentMessages
-    self.messages.last(3).map do |msg|
+    self.messages.last(8).map do |msg|
       { player_username: msg.player_username, content: msg.content, player_id: msg.player_id }
     end
   end
