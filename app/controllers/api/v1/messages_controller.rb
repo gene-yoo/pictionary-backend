@@ -3,6 +3,7 @@ class Api::V1::MessagesController < ApplicationController
     pg = PlayerGame.find_by(player_game_params)
     msg = Message.new(message_params)
     msg.player_game = pg
+    pg.score += 10
     if msg.save
       render json: msg
     else
