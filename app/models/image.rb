@@ -1,14 +1,16 @@
-require 'faker'
+
 class Image < ApplicationRecord
   belongs_to :game
 
+
   # before_save :setkeyword
   #
-  # def setkeyword
-  #   self.keyword = Image.keyword.sample
-  # end
+  # def keyword
   #
-  # def self.keyword
-  #   ["cat", "dog", "tree"]
+  #   Image.keyword.sample
   # end
+  # #
+  def self.keywords
+    ["honey", "mall", "mud", "phone", "cheek", "event", "power", "owner", "error", "meat", "ear", "paper", "actor", "gate", "news", "exam", "beer", "skill", "lab", "mode", "shirt", "two", "user", "map", "truth", "bath", "salad", "debt", "union", "apple", "river", "scene", "soup", "lady", "hall", "ad", "goal", "night", "year", "video", "entry", "child", "week", "area", "fact", "media", "lake", "king", "chest", "dirt", "bonus", "woman", "tale", "guest", "hotel", "desk", "sir", "poem", "unit", "music", "death", "month", "way", "love", "basis", "wife", "bird", "youth", "queen", "uncle", "topic", "role", "cell", "virus", "city", "hair", "gene", "meal", "song", "bread", "depth", "movie", "photo", "data", "hat", "tooth", "son", "ratio", "law", "heart", "girl", "tea", "math", "wood", "loss", "world", "town", "buyer", "drama", "pizza", "piano", "thing", "fund", "wash", "grow", "blame", "match", "refer", "heat", "avoid", "hurt", "dip", "fit", "note", "walk", "do", "print", "snap", "jump", "breed", "ban", "time", "cook", "last", "shift", "speed", "book", "sort", "fill", "incur", "born", "knock", "adopt", "load", "found", "deal", "cross", "apply", "hear", "tell", "seek", "echo", "taste", "tie", "serve", "merge", "lead", "wipe", "award", "kill", "bring", "boot", "trunk", "haunt", "thick", "final", "golf", "ridge", "mail", "sweet", "egg", "army", "man", "green", "spite", "bake", "dress", "guide", "hope", "merit", "tight", "embox", "rib", "bond", "lemon", "park", "mist", "glass", "trail", "deck", "land", "high", "crime", "open", "ton", "visit", "worth", "ego", "harsh", "lack", "lover", "tin", "bike", "drag", "count", "mile", "means", "wine", "raw", "rally", "sweat", "pipe", "wind", "beg", "mole", "lamp", "left", "fool", "humor", "deny", "live", "pit", "find", "line", "fare", "hell", "stand", "fall", "back", "van", "swear", "stuff", "soul", "acid", "fax", "bulb", "deep", "will", "sugar", "grand", "floor", "jail", "know", "unity", "bald", "frog", "save", "sea", "eaux", "roar", "blow", "face", "drum", "aisle", "elbow", "wake", "tool", "art", "vain", "drown", "rebel", "blade", "false", "win", "cap", "sign", "drill", "giant", "ditch", "wheat", "tear", "cord", "medal", "bowel", "rumor", "raise", "cash", "brick", "flood", "gas", "first", "brave", "enfix", "pot", "feed", "steak", "pay", "lamb", "lid", "roof", "bless", "wear", "shame", "hero", "attic", "value", "rank", "knee", "major", "dead", "disk", "pump", "mix", "prove", "bang", "exit", "slide", "owe", "alarm", "water", "point", "tempt", "sofa", "shy", "cage", "flock", "bin", "vein", "read", "chop", "sleep", "sale", "able", "wagon", "image", "ideal", "shock", "tile", "check", "penny", "bat", "tray", "hen", "worry", "toll", "act", "wild", "stick", "split", "tax", "mask", "stage", "slump", "west", "liver", "gasp", "bee", "net", "snail", "grant", "colon", "crew", "even", "still", "step", "set", "loud", "shine", "allow", "tank", "solid", "spell", "color", "draft", "fox", "rich", "whip", "south", "acute", "lose", "dash", "cart", "sheep", "snarl", "faith", "awful", "room", "new", "go", "novel", "rule", "flex", "mercy", "swim", "sheet", "stir", "twin", "fire", "issue", "brush", "well", "tap", "hard", "spin", "bus", "basic", "mug", "enjoy", "rack", "low", "anger", "gem", "top", "float", "plead", "log", "vague", "snow", "flash", "dry", "pony", "table", "agile", "fairy", "gain", "panic", "snake", "amuse", "gold", "lay", "herb", "party", "brake", "drop", "sick", "fog", "plant", "cater", "make", "dough", "arise", "job", "kid", "solo", "drive", "call", "board", "steam", "diet", "quest", "blind", "prey", "pride", "debut", "hike", "dive", "cruel", "pluck", "gap", "hole", "agree", "hot", "trick", "heir", "tidy", "order", "stall", "soar", "orbit", "ward", "dare", "pure", "coach", "frown", "lion", "chin", "term", "money", "wire", "shot", "smile", "meet", "tiger", "admit", "court", "chase", "cover", "limit", "burn", "soap", "ant", "shaft", "grind", "hang", "core", "pop", "pick", "pin", "glove", "abuse", "delay", "ready", "loan", "yearn", "buy", "flow", "duty", "bay", "jaw", "slap", "seal", "X-ray", "club", "linen", "witch", "screw", "vat", "chord", "move", "begin"] 
+  end
 end

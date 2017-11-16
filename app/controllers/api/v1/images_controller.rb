@@ -1,6 +1,7 @@
 class Api::V1::ImagesController < ApplicationController
   def create
     @image = Image.new(image_params)
+    @image.keyword = Image.keywords.sample
     if @image.save
       render json: @image
     else
