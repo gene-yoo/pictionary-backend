@@ -26,11 +26,11 @@ class Game < ApplicationRecord
   end
 
   def playerScores
-    hash = {}
+    array = []
     self.player_games.each do |pg|
-      hash[pg.player.username] = pg.score
+      array << {"#{pg.player.username}": "#{pg.score}"}
     end
-    hash
+    array
   end
 
   def currentDrawerId
