@@ -17,4 +17,8 @@ class Message < ApplicationRecord
   def guessed_correctly
     self.game.currentKeyword == self.content
   end
+
+  def player_score
+    self.player_game.score
+  end
 end
