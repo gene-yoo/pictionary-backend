@@ -28,7 +28,7 @@ class Game < ApplicationRecord
   def playerScores
     hash = {}
     self.player_games.each do |pg|
-      hash[pg.player] = hash[pg.score]
+      hash[pg.player.username] = hash[pg.score]
     end
     hash
   end
