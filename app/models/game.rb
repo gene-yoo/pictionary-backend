@@ -25,6 +25,14 @@ class Game < ApplicationRecord
     end
   end
 
+  def playerScores
+    hash = {}
+    self.player_games.each do |pg|
+      hash[pg.player] = hash[pg.score]
+    end
+    hash
+  end
+
   def currentDrawerId
     self.player_games.where(is_drawer: true).first.player_id
   end
