@@ -3,7 +3,7 @@ class Api::V1::MessagesController < ApplicationController
     pg = PlayerGame.find_by(player_game_params)
     msg = Message.new(message_params)
     msg.player_game = pg
-    if (msg.content == "Guessed Correctly")
+    if (msg.content.include?('guessed correctly!'))
       pg.score += 10
       pg.save
     end
