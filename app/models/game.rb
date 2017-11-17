@@ -20,8 +20,8 @@ class Game < ApplicationRecord
   end
 
   def recentMessages
-    self.messages.last(13).map do |msg|
-      { player_username: msg.player_username, content: msg.content, player_id: msg.player_id }
+    self.messages.last(10).map do |msg|
+      { msg_id: msg.id, player_username: msg.player_username, content: msg.content, player_id: msg.player_id }
     end
   end
 
